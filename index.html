@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="一个简洁的个人主页，包含个人介绍和一个简单的在线计算器。"
+    />
+    <title>我的个人主页</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="intro">
+        <p class="eyebrow">PERSONAL WEBSITE</p>
+        <h1>你好，我是<span>一名创造者</span>。</h1>
+        <p class="intro-copy">
+          欢迎来到我的小小空间。我喜欢探索新事物，也喜欢把简单的想法变成有趣的作品。
+        </p>
+        <a class="contact-link" href="mailto:hello@example.com">
+          联系我 <span aria-hidden="true">↗</span>
+        </a>
+      </header>
+
+      <section class="calculator-section" aria-labelledby="calculator-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">A LITTLE TOOL</p>
+            <h2 id="calculator-title">随手计算</h2>
+          </div>
+          <span class="section-note">简单 · 实用</span>
+        </div>
+
+        <div class="calculator">
+          <div class="display" aria-live="polite" aria-atomic="true">
+            <div class="display-expression" id="expression"></div>
+            <output class="display-value" id="display" aria-label="计算结果">0</output>
+          </div>
+
+          <div class="keypad" aria-label="计算器按键">
+            <button class="key key-muted" type="button" data-action="clear" aria-label="清除">AC</button>
+            <button class="key key-muted" type="button" data-action="delete" aria-label="删除">⌫</button>
+            <button class="key key-muted" type="button" data-action="operator" data-value="÷" aria-label="除以">÷</button>
+            <button class="key key-operator" type="button" data-action="operator" data-value="×" aria-label="乘以">×</button>
+
+            <button class="key" type="button" data-action="digit" data-value="7">7</button>
+            <button class="key" type="button" data-action="digit" data-value="8">8</button>
+            <button class="key" type="button" data-action="digit" data-value="9">9</button>
+            <button class="key key-operator" type="button" data-action="operator" data-value="−" aria-label="减去">−</button>
+
+            <button class="key" type="button" data-action="digit" data-value="4">4</button>
+            <button class="key" type="button" data-action="digit" data-value="5">5</button>
+            <button class="key" type="button" data-action="digit" data-value="6">6</button>
+            <button class="key key-operator" type="button" data-action="operator" data-value="+" aria-label="加上">+</button>
+
+            <button class="key" type="button" data-action="digit" data-value="1">1</button>
+            <button class="key" type="button" data-action="digit" data-value="2">2</button>
+            <button class="key" type="button" data-action="digit" data-value="3">3</button>
+            <button class="key key-equals" type="button" data-action="equals" aria-label="等于">=</button>
+
+            <button class="key key-zero" type="button" data-action="digit" data-value="0">0</button>
+            <button class="key" type="button" data-action="decimal" aria-label="小数点">.</button>
+            <button class="key key-operator" type="button" data-action="sign" aria-label="正负切换">+/−</button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>用一点点代码，做一点点有趣的事。</span>
+        <span>© 2026 我的个人主页</span>
+      </footer>
+    </main>
+  </body>
+</html>

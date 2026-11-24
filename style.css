@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap");
+
+:root {
+  color-scheme: light;
+  font-family: "DM Sans", "Noto Sans SC", sans-serif;
+  color: #24231f;
+  background: #f7f6f2;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 14% 12%, rgb(230 226 213 / 54%), transparent 31rem),
+    #f7f6f2;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.page {
+  width: min(100% - 48px, 920px);
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.intro {
+  padding: clamp(64px, 12vh, 118px) 0 64px;
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  color: #89877e;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 650px;
+  margin-bottom: 20px;
+  font-size: clamp(38px, 7vw, 66px);
+  font-weight: 600;
+  letter-spacing: -0.065em;
+  line-height: 1.18;
+}
+
+h1 span {
+  color: #9c7951;
+}
+
+.intro-copy {
+  max-width: 510px;
+  margin-bottom: 25px;
+  color: #77756e;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #38372f;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid #c9c4b8;
+  padding-bottom: 5px;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+
+.contact-link:hover {
+  color: #9c7951;
+  border-color: #9c7951;
+}
+
+.calculator-section {
+  width: min(100%, 500px);
+  align-self: center;
+  margin: 0 auto 60px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.section-heading .eyebrow {
+  margin-bottom: 7px;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.section-note {
+  padding-bottom: 4px;
+  color: #8a9bb0;
+  font-size: 12px;
+}
+
+.calculator {
+  padding: 18px;
+  border: 1px solid #d9e4f2;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #f7fbff 0%, #ffffff 42%);
+  box-shadow: 0 20px 55px rgb(40 80 130 / 10%);
+}
+
+.display {
+  display: flex;
+  min-height: 112px;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding: 8px 8px 20px;
+}
+
+.display-expression {
+  min-height: 22px;
+  color: #8a9bb0;
+  font-size: 14px;
+}
+
+.display-value {
+  max-width: 100%;
+  overflow: hidden;
+  color: #1e2a3a;
+  font-size: clamp(38px, 10vw, 52px);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 1.12;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.key {
+  min-height: 58px;
+  border: 0;
+  border-radius: 14px;
+  background: #eef3f9;
+  color: #2a3545;
+  cursor: pointer;
+  font: inherit;
+  font-size: 18px;
+  font-weight: 500;
+  transition: background 140ms ease, color 140ms ease, transform 140ms ease;
+}
+
+.key:hover {
+  background: #e0e9f3;
+}
+
+.key:active {
+  transform: scale(0.96);
+}
+
+.key:focus-visible,
+.contact-link:focus-visible {
+  outline: 3px solid #7aa8d9;
+  outline-offset: 3px;
+}
+
+.key-muted {
+  color: #6b7a8d;
+  font-size: 15px;
+}
+
+.key-operator {
+  background: #e8f0fa;
+  color: #3b6ea5;
+}
+
+.key-operator:hover {
+  background: #d7e6f5;
+}
+
+.key-equals {
+  grid-row: span 2;
+  background: #3b6ea5;
+  color: white;
+  font-size: 23px;
+}
+
+.key-equals:hover {
+  background: #2f5a88;
+}
+
+.key-zero {
+  grid-column: span 2;
+  text-align: left;
+  padding-left: 25px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: auto;
+  padding: 24px 0 28px;
+  border-top: 1px solid #e8e6df;
+  color: #96938a;
+  font-size: 11px;
+}
+
+@media (max-width: 520px) {
+  .page {
+    width: min(100% - 36px, 920px);
+  }
+
+  .intro {
+    padding: 68px 0 54px;
+  }
+
+  .calculator {
+    padding: 13px;
+    border-radius: 19px;
+  }
+
+  .keypad {
+    gap: 7px;
+  }
+
+  .key {
+    min-height: 56px;
+    border-radius: 12px;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 7px;
+  }
+}
